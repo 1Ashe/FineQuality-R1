@@ -5,10 +5,6 @@
 [![Code](https://img.shields.io/badge/Code-GitHub-181717?logo=github)](https://github.com/1Ashe/FineQuality-R1)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
 
-Tian Qiu<sup>*</sup>, Baoliang Chen<sup>*</sup>, Jiaye Chen, and Jieyu Zhan<sup>†</sup>
-
-South China Normal University
-
 </div>
 
 > Official implementation of FQD-R1, a fine-grained no-reference image quality assessment framework for near-boundary ranking and spatially grounded quality reasoning.
