@@ -1,0 +1,4 @@
+datasets:
+    - json_path: "<REFCOCO_TRAIN_JSON>"
+    - json_path: "<REFCOCO_PLUS_TRAIN_JSON>"
+    - json_path: "<REFCOCOG_TRAIN_JSON>"
