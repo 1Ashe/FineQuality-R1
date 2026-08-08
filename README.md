@@ -20,30 +20,21 @@ South China Normal University
 **Motivation.** Existing LMM-IQA methods can rank easy pairs with large quality gaps, but often struggle with near-boundary pairs and weakly grounded explanations. FQD-R1 improves subtle quality ranking while anchoring each decision to localized visual evidence.
 
 <div align="center">
-  <img src="docs/statics/framework.png" width="100%">
-</div>
-
-**Framework.** FQD-R1 combines ambiguity-aware memory learning with saliency-grounded quality reasoning in a GRPO training loop. Hard samples are constructed from MOS-localized neighborhoods and refined using error memory, while fidelity, format, and saliency rewards jointly optimize the policy.
-
-<div align="center">
   <img src="docs/statics/saliency_reward.png" width="90%">
 </div>
 
 **Saliency reward.** Coverage rewards predicted regions that capture salient content, while the variance term penalizes boxes that cross saliency boundaries or cover heterogeneous regions.
 
-## 🔧 Environment Setup
+## Environment setup
 
-The recommended setup is Linux with Python 3.11.10, an NVIDIA GPU, and a CUDA 12.4-compatible toolkit.
+Quickly create the `fqd` Conda environment with the packages required to run our training scripts.
 
 ```bash
-conda create --name fqd python=3.11.10 --yes
+conda create -n fqd python=3.11.10
 conda activate fqd
 
-python -m pip install --upgrade pip setuptools wheel
-python -m pip install torch==2.6.0 torchvision==0.21.0 packaging==25.0 ninja==1.13.0 psutil==7.0.0
 export CUDA_HOME="<CUDA_HOME>"
-python -m pip install --no-build-isolation -r requirements.txt
-python -m pip install --no-deps -e src/open-r1-multimodal
+bash setup.sh
 ```
 
 Replace `<CUDA_HOME>` with the path to the local CUDA toolkit.

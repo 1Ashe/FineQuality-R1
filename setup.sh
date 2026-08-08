@@ -1,17 +1,7 @@
+#!/usr/bin/env bash
+set -e
 
-cd src/open-r1-multimodal
-pip install -e ".[dev]"
-
-pip install wandb==0.18.3
-pip install tensorboardx
-pip install qwen_vl_utils==0.0.10
-pip install torchvision==0.21.0
-pip install babel
-pip install python-Levenshtein
-pip install matplotlib
-pip install pycocotools
-pip install openai
-pip install json_repair
-pip install httpx[socks]
-pip install optimum
-pip install flash-attn==2.7.4.post1
+python -m pip install --upgrade pip setuptools wheel
+python -m pip install torch==2.6.0 torchvision==0.21.0 packaging==25.0 ninja==1.13.0 psutil==7.0.0
+python -m pip install --no-build-isolation -r requirements.txt
+python -m pip install --no-deps -e src/open-r1-multimodal
